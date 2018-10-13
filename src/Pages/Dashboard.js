@@ -1,9 +1,27 @@
 import React, { Component } from 'react'
+import { LeftNav, TopNav } from '../Components'
+
+import '../Styles/Dashboard.css'
 
 class Dashboard extends Component {
+    state = {
+        page:'Geolocation'
+    }
+
+    ChangePage = (page) => {
+        this.setState({
+            page
+        })
+    }
+
     render() {
         return (
-            <h1>Dashboard</h1>
+            <section className='dashboard'>
+                <TopNav page={this.state.page}/>
+                <div className='bottom'>
+                    <LeftNav ChangePage={this.ChangePage}/>
+                </div>
+            </section>
         );
     }
 }

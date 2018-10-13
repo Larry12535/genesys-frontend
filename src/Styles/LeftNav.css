@@ -1,0 +1,14 @@
+.nav {
+    width:50px;
+    height:100%;
+    background:#131517;
+    display:flex;
+    flex-direction: column;
+}
+
+.changePage {
+    width:50px;
+    height:50px;
+    background-size:cover;
+    background-position:center;
+}

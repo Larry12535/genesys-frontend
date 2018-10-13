@@ -1,13 +1,8 @@
-import { Dashboard, Login } from '../Pages'
+import { Dashboard } from '../Pages'
 
 const routes = [
     {
         path:'/',
-        exact:true,
-        component:Login
-    },
-    {
-        path:'/Dashboard',
         exact:true,
         component:Dashboard
     }

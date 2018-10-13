@@ -1,0 +1,18 @@
+* {
+    margin:0;
+    padding:0;
+    border:none;
+    outline:none;
+}
+
+html, body {
+    min-height:100vh;
+}
+
+#root {
+    min-height:100vh;
+}
+
+button {
+    cursor: pointer;
+}

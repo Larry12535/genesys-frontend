@@ -1,0 +1,12 @@
+.topNav {
+    box-sizing:border-box;
+    box-shadow: 0 4px 2px -2px gray;
+    height:40px;
+    width:100%;
+    background:#33383D;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    color:white;
+}
