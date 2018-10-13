@@ -24,6 +24,7 @@ function Nav(props) {
     return <section className='nav'>
         {pages.map(({ page, img }) => 
             <button
+                key={page}
                 className='changePage'
                 style={{ 
                     backgroundImage: `url(${img})`

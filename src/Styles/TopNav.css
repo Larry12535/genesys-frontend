@@ -7,6 +7,10 @@
     display:flex;
     justify-content: center;
     align-items: center;
+}
+
+.page {
+    user-select: none;
     font-family: sans-serif;
     color:white;
 }

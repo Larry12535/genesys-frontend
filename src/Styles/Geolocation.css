@@ -1,0 +1,21 @@
+.geography {
+    box-sizing: border-box;
+    min-height:100%;
+    padding:15px;
+    display:flex;
+    flex-direction: column;
+}
+
+.AnalyticsInfo {
+    font-family: sans-serif;
+    font-size: 24px;
+}
+
+.geographyVisualization {
+    padding:50px;
+    width:100%;
+    box-sizing: border-box;
+    border:1px solid black;
+    display:flex;
+    justify-content: center;
+}

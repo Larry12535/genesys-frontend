@@ -1,25 +1,19 @@
 import React, { Component } from 'react'
-import '../Styles/Tickets.css'
+import '../Styles/Analytics.css'
 
-class Tickets extends Component {
+import Geography from './Analytics/Geography' 
+
+class Analytics extends Component {
     render() {
+        const { page } = this.props
         return (
-            <section className='ticketSection'>
-                <div className='incoming'>
-                    <div>Incoming Tickets</div>
-                    <div className='CallInfo'>
-                        
-                    </div>
-                </div>
-                <div className='dispatched'>
-                    <div>Dispatched Tickets</div>
-                    <div className='CallInfo'>
-                        
-                    </div>
-                </div>
-            </section>            
+            <section className='analytics'>
+                {page === 'Geolocation' &&
+                    <Geography/>
+                }
+            </section>
         );
     }
 }
 
-export default Tickets;
+export default Analytics;
