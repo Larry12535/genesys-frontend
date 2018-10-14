@@ -40,3 +40,11 @@
     font-weight:600;
     background:#EAEAEA;
 }
+
+.dayChangeButtonsWrapper {
+    margin-top:20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+}

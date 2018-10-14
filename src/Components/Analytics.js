@@ -6,13 +6,13 @@ import TimeAnalysis from './Analytics/TimeAnalysis'
 
 const info = {
     geography:[],
-    day:1
 }
 
 class Analytics extends Component {
     state = {
         overTime:[],
-        day:0
+        day:0,
+        currentDay:0
     }
 
     componentDidMount = () => {
@@ -24,20 +24,27 @@ class Analytics extends Component {
         const json = await data.json()
         const dayInfo = {...info}
         dayInfo.geography = json
-        dayInfo.day = day
         const state = this.state
         state.day = day
+        state.currentDay = day
         state.overTime.push(dayInfo)
         this.setState(state)
+        console.log(this.state.currentDay)
     }
 
     NextDay = () => {
         this.GetData(this.state.day + 1)
     }
 
+    ChangeDay = (currentDay) => {
+        const state = this.state
+        state.currentDay = currentDay
+        this.setState(state)
+    }
+
     render() {
         const { page } = this.props
-        const currentDayInfo = this.state.overTime[this.state.day - 1]
+        const currentDayInfo = this.state.overTime[this.state.currentDay - 1]
         return (
             <section className='analytics'>
                 {page === 'Geolocation' &&
@@ -46,6 +53,8 @@ class Analytics extends Component {
                         NextDay={this.NextDay}
                         info={currentDayInfo}
                         day={this.state.day}
+                        currentDay={this.state.currentDay}
+                        ChangeDay={this.ChangeDay}
                     />
                 }
                 {page === 'Geolocation Over Time' &&

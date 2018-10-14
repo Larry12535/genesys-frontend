@@ -19,6 +19,13 @@ class Geography extends PureComponent {
                 })
             }
         }
+
+        const changeDayButtons = []
+        for (let i = 0; i < day; i++) {
+            changeDayButtons.push(
+                <button key={i} className='nextDay' onClick={() => this.props.ChangeDay(i + 1)}>Day {i + 1}</button>
+            )
+        }
         
         return (
             <section className='geography'>
@@ -35,6 +42,9 @@ class Geography extends PureComponent {
                 </div>
                 <div className='nextDayWrapper'>
                     <button className='nextDay' onClick={this.props.NextDay}>Next Day</button>
+                </div>
+                <div className='dayChangeButtonsWrapper'>
+                    {changeDayButtons}
                 </div>
             </section>
         );

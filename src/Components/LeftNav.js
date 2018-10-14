@@ -9,14 +9,6 @@ const pages = [
     {
         page:'Geolocation Over Time',
         img:'https://cdn.discordapp.com/attachments/454248926963564556/500818555852554240/graph.png'
-    },
-    {
-        page:'3',
-        img:'https://cdn.discordapp.com/attachments/454248926963564556/455005317693177886/guy_grabbing_dog.jpg'
-    },
-    {
-        page:'4',
-        img:'https://cdn.discordapp.com/attachments/454248926963564556/498916198021595136/dog3.jpg'
     }
 ]
 
