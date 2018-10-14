@@ -1,0 +1,42 @@
+.geography {
+    box-sizing: border-box;
+    min-height:100%;
+    padding:15px;
+    display:flex;
+    flex-direction: column;
+}
+
+.AnalyticsInfo {
+    font-family: sans-serif;
+    font-size: 24px;
+}
+
+.dayNumber {
+    font-family: sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.geographyVisualization {
+    padding:50px;
+    display:flex;
+    justify-content: center;
+}
+
+.nextDayWrapper {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nextDay {
+    width:100px;
+    height:30px;
+    box-sizing: border-box;
+    border:1px solid #D1D1D1;
+    font-family: sans-serif;
+    font-size:14px;
+    font-weight:600;
+    background:#EAEAEA;
+}

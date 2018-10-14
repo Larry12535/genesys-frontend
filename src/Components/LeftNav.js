@@ -4,11 +4,11 @@ import '../Styles/LeftNav.css'
 const pages = [
     {
         page: 'Geolocation',
-        img: 'https://cdn.discordapp.com/attachments/454248926963564556/456516632018419712/DogIcon.jpg'
+        img: 'https://cdn.discordapp.com/attachments/454248926963564556/500814006307520512/kisspng-world-earth-icon-world-transparent-background-5a77e818889893.2780457615178076405595.png'
     },
     {
-        page:'2',
-        img:'https://cdn.discordapp.com/attachments/454248926963564556/500778735574712343/dog2.jpg'
+        page:'Geolocation Over Time',
+        img:'https://cdn.discordapp.com/attachments/454248926963564556/500818555852554240/graph.png'
     },
     {
         page:'3',

@@ -1,36 +1,40 @@
-import React, { Component } from 'react'
-import '../../Styles/Geolocation.css'
+import React, { PureComponent } from 'react'
+import '../../Styles/Geography.css'
 
-import ReactMapGL from 'react-map-gl';
+import Histogram from 'react-chart-histogram'
 
-class Geography extends Component {
-    state = {
-        geography:[]
-    }
-
-    componentDidMount = () => {
-        fetch('http://172.46.3.253:8080/geolocation')
-        .then(data => data.json())
-        .then((data) => {
-            this.setState({
-                geography:data.geoLocation
-            })
-        })
-    }
-
+class Geography extends PureComponent {
     render() {
-        const { geography } = this.state
+        const { day } = this.props
+        const labels = [];
+        const values = [];
+        const options = { fillColor: '#FFFFFF', strokeColor: '#0000FF' };
+        if (this.props.info) {
+            const { geography } = this.props.info
+            const geoLocation = geography.geoLocation
+            if (geoLocation) {
+                geoLocation.forEach(({ area, callerCount }) => {
+                    labels.push(area)
+                    values.push(callerCount)
+                })
+            }
+        }
+        
         return (
             <section className='geography'>
                 <h1 className='AnalyticsInfo'>Geolocation Data</h1>
+                <h2 className='dayNumber'>Day {day}</h2>
                 <div className='geographyVisualization'>
-                    <ReactMapGl
-                        width={400}
-                        height={400}
-                        latitude={37.7577}
-                        longitude={-122.4376}
-                        zoom={8}
+                    <Histogram
+                        xLabels={labels}
+                        yValues={values}
+                        width='800'
+                        height='500'
+                        options={options}
                     />
+                </div>
+                <div className='nextDayWrapper'>
+                    <button className='nextDay' onClick={this.props.NextDay}>Next Day</button>
                 </div>
             </section>
         );

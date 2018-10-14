@@ -4,11 +4,17 @@
     background:#131517;
     display:flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .changePage {
     width:50px;
     height:50px;
+    background:transparent;
     background-size:cover;
     background-position:center;
+}
+
+.changePage:hover {
+    background-color:black;
 }

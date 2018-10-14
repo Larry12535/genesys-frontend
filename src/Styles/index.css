@@ -15,4 +15,5 @@ html, body {
 
 button {
     cursor: pointer;
+    background:transparent;
 }

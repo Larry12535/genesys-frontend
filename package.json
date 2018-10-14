@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@data-ui/histogram": "0.0.69",
     "react": "^16.5.2",
+    "react-chart-histogram": "^0.2.1",
     "react-dom": "^16.5.2",
-    "react-map-gl": "^3.3.5",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.0.4"
+    "react-scripts": "2.0.4",
+    "react-vis": "^1.11.2"
   },
   "scripts": {
     "start": "react-scripts start",
